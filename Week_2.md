@@ -53,9 +53,14 @@ jobs:
 ```
 
  ### 2. Show an example of a learning outcome you have struggled with and/or would like to re-visit.
-> [**Learning outcome...**]  
+
 We decided to used a Dev Branch and push our code there before pushing our final code into main.
-Some of us had some issues with git. 
+Some of us had some issues with git such as their branch was ahead of the original branch, or accidentally merged code into main and ending with some code in the dev branch and some in main. I would like to learn more about how to set up some rules in github that will prevent us from making this mistakes in the future. 
+
+I did some research and found some interesting articles about best practices using git.
+Links here: 
+https://medium.com/git-happy/10-key-best-practices-for-git-branch-management-b0e7ec4148b9
+https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy
 
 ## Feedback
 > [**Course Facilitator name**]  
