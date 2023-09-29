@@ -11,8 +11,9 @@ Do not fill in the feedback section. The Founders and Coders team will update th
 
 
 > **[Learning outcome...]**  
-> [your evidence here]
 
+Yml file below:
+ 
 ```JS
 name: Fly Deploy
 
@@ -60,7 +61,16 @@ Some of us had some issues with git such as their branch was ahead of the origin
 I did some research and found some interesting articles about best practices using git.
 Links here: 
 https://medium.com/git-happy/10-key-best-practices-for-git-branch-management-b0e7ec4148b9
+
 https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy
+
+
+I also came accross GitHub release which can potentially be a good alternative to keep your code clean, and make sure that your app is always working as expected. 
+
+**GitHub Releases** is a feature provided by GitHub that allows you to package and distribute specific versions of your software or project to your users or collaborators. It is a way to formally publish and distribute your project's releases, making it easier for others to understand what changes have been made in each release and to access the associated assets and documentation.
+
+https://github.com/marketplace/actions/create-github-release
+
 
 ## Feedback
 > [**Course Facilitator name**]  
