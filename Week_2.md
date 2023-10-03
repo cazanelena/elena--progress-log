@@ -73,6 +73,14 @@ https://github.com/marketplace/actions/create-github-release
 
 
 ## Feedback
-> [**Course Facilitator name**]  
-> [*What went well*]  
-> [*Even better if*]
+### Alphonso's Feedback
+#### What went well
+Love that you linked some resources for the learning you struggled with! Great way to show a plan for next steps.
+Adding the Yml script to your example in question 1 is also a nice extra detail.
+
+#### Even better if
+Think of explaining the *why* of things as well as the *how* of things. As a developer I love that you're thinking of ways to enforce regular testing in your project but anyone who hasn't had to manage a rapidly changing codebase will lack the context to this - even a new developer joining your team may not be accustomed to Test Driven Development. One or two lines about the reasoning behind this setup would make all the difference in the world.
+
+It's great that you spotted potential solutions to the outcome you're struggling with but it's worth thinking of their actual application. New releases are always exciting because they generally come with the promise of solving some problem we've come up against a lot but *are there possible solutions available that don't depend on a new release*?
+The articles you linked mention best practices - having clear and steady best practice in place is usually the best solution.
+Consider documenting a work flow and a few best practices you would like to implement and liaising with your Scrum Facilitator to implement them in a future project. That documentation can then also serve as proof of your learning :) 
