@@ -66,3 +66,7 @@ jobs:
 
 > There are some ‘industry standards’ when it comes to scripts. This article outlines the difference between dev and build scripts: [medium.com](https://medium.com/@zahidbashirkhan/whats-the-difference-between-npm-run-dev-npm-run-build-and-npm-run-start-in-next-js-7baf9b7c5d39#:~:text=In%20summary%2C%20npm%20run%20dev,the%20build%20process%20is%20completed.) ☄️ 
 
+
+> Elena
+
+> Thanks Beth for sharing the article with me. Really useful and informative! 
