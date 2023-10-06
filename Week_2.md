@@ -84,3 +84,8 @@ Think of explaining the *why* of things as well as the *how* of things. As a dev
 It's great that you spotted potential solutions to the outcome you're struggling with but it's worth thinking of their actual application. New releases are always exciting because they generally come with the promise of solving some problem we've come up against a lot but *are there possible solutions available that don't depend on a new release*?
 The articles you linked mention best practices - having clear and steady best practice in place is usually the best solution.
 Consider documenting a work flow and a few best practices you would like to implement and liaising with your Scrum Facilitator to implement them in a future project. That documentation can then also serve as proof of your learning :) 
+
+
+> Elena
+
+> Thanks for the feedback Alphonso! I definitely agree and I think it's important to consider both the why and the how. I think that when we made certain decisions, we didn't have a comprehensive understanding of how things would work, and we rushed into making choices without conducting thorough research on best practices. But it's good I learned something and next time hopefully can make things better.
