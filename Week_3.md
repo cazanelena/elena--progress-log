@@ -87,6 +87,9 @@ function homePage() {
 Ideally, in the future I would split the templates file in different files because it become a bit difficult to read and navigate.
 
 ## Feedback
-> [**Course Facilitator name**]  
-> [*What went well*]  
-> [*Even better if*]
+> Beth
+
+> Your understanding of the deployment logs is excellent 👏
+
+> When splitting files, it’s a good idea to ensure that each file/module does just one thing. This will be less of an issue when you switch to react next week.
+A useful resource on environment variables in node.js: [working-with-environment-variables-in-node-js-html](https://www.twilio.com/blog/working-with-environment-variables-in-node-js-html)
