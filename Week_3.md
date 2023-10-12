@@ -93,3 +93,7 @@ Ideally, in the future I would split the templates file in different files becau
 
 > When splitting files, it’s a good idea to ensure that each file/module does just one thing. This will be less of an issue when you switch to react next week.
 A useful resource on environment variables in node.js: [working-with-environment-variables-in-node-js-html](https://www.twilio.com/blog/working-with-environment-variables-in-node-js-html)
+
+
+> Elena
+> Thanks, Beth. Love the article. I will make sure I bookmark it for the next projects. 
