@@ -6,7 +6,7 @@ Do not fill in the feedback section. The Founders and Coders team will update th
 
 ## Assessment
  ### 1. Show evidence of a learning outcome you have achieved this week.
-> **[Learning outcome...]**  
+
 > This week I learned how to setup Sentry and monitor the performance of our app. 
 
 ```js
@@ -47,8 +47,51 @@ Used Fly.io to monitor the memory usage. This helped me tackle why our app was c
 
 
  ### 2. Show an example of a learning outcome you have struggled with and/or would like to re-visit.
-> [**Learning outcome...**]  
-> [your evidence here]
+
+> Saving file upload to the database (images). I haven't wrote the code, but would be nice to revisit this.
+
+> When a user sends a POST request to the route, it checks if the uploaded file is an image (JPEG or PNG) and if it's under 5 megabytes in size. If these conditions are met, it stores the image as a base64-encoded string, inserts information about the image into a database, and redirects the user to a different page. If the conditions are not met, it returns an error response. The GET request to the same route returns a form for file upload.
+
+```js
+const multer = require("multer");
+const upload = multer({ storage: multer.memoryStorage() });
+const MAX_SIZE = 1000 * 1000 * 5; // 5 megabytes
+const ALLOWED_TYPES = ["image/jpeg", "image/png"];
+
+router.get("/", (req, res) => {
+  return res.send(form());
+});
+
+router.post("/", upload.single("avatar"), (req, res) => {
+  // req.file is the `avatar` file
+  const fileImg = req.file;
+
+  if (!ALLOWED_TYPES.includes(fileImg.mimetype)) {
+    res.status(400).send("<h1>File upload error</h1><p>Please upload an image file</p>");
+  }
+
+  if (fileImg.size > MAX_SIZE) {
+    res.status(400).send("<h1>File upload error</h1><p>Profile picture must be < 5MB</p>");
+  } else {
+    // req.body will hold the text fields, if there were any
+    const { name, description } = req.body;
+    let tags = req.body.action;
+
+    if (!tags) {
+      tags = [];
+    }
+
+    const tagsString = tags.join(", ");
+
+    const imageBuffer = fileImg.buffer.toString("base64");
+    const imageId = insertImage(imageBuffer).id;
+    insertArtworkDetails(description, imageId, name, tagsString);
+
+    res.redirect("/");
+  }
+});
+
+```
 
 ## Feedback
 > [**Course Facilitator name**]  
