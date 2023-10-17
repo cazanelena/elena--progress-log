@@ -94,6 +94,11 @@ router.post("/", upload.single("avatar"), (req, res) => {
 ```
 
 ## Feedback
-> [**Course Facilitator name**]  
-> [*What went well*]  
-> [*Even better if*]
+### Alphonso's feedback
+#### What Went Well
+Great work with Sentry. The explanation you gave during presentations about tracking and addressing the issue with memory usage during the code reviews was particularly insightful.
+Maybe you could even repurpose those slides for documentation like this progress log or your portfolio.
+Also have a think about maybe visiting one of your suggested solutions in a larger project, like the upcomming in-house build. Could there be a case for applying queueing, for example? 
+
+#### Even Better If
+[Tommaso's progress log](https://github.com/fac28/Tommaso-progress-log/blob/main/Week_4.md) has a pretty detailed run down of the setup of Multer that might be useful for you if you want to give this a try in a future project.
