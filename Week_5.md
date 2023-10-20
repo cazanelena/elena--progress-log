@@ -9,6 +9,8 @@ Do not fill in the feedback section. The Founders and Coders team will update th
 > **[Learning outcome...]**
 > I learned how to use a count state and passed it on as a denpendancy to useEffect in order to render a new set of questions every time the user would click a reset button.
 
+> [your evidence here]
+
 ```js
 
  const [count, setCount] = useState(0);
@@ -38,7 +40,6 @@ Do not fill in the feedback section. The Founders and Coders team will update th
 
 ```
 
-> [your evidence here]
 
  ### 2. Show an example of a learning outcome you have struggled with and/or would like to re-visit.
 > [**Learning outcome...**]
