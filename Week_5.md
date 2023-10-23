@@ -58,6 +58,8 @@ function TriviaApp() {
 ```
 
 ## Feedback
-> [**Course Facilitator name**]  
-> [*What went well*]  
-> [*Even better if*]
+> Beth
+
+> Well done getting the hang of useState and useEffect to manage state and side effects in your component. Using the count state as a dependency in the useEffect is a smart way to re-fetch questions whenever the user wishes to reset 👏
+
+> o address the issue of multiple states, you could consider using the useReducer hook, which allows for more complex state logic to be encapsulated in actions and reducers. See here for more: [use reducer](https://react.dev/reference/react/useReducer)
