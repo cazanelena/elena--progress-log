@@ -6,12 +6,101 @@ Do not fill in the feedback section. The Founders and Coders team will update th
 
 ## Assessment
  ### 1. Show evidence of a learning outcome you have achieved this week.
-> **[Learning outcome...]**  
-> [your evidence here]
+> **[Learning outcome...]**
+> Like everyone else that tried to use next js 13 and react probably bumped into the error: "You can use client components on the server components".
+
+> Server components can import and render client components, but client components can't render the server components in it. If you want to use a server component in a client component we user Context API in React to manage the state and make it global.
+**> Code below:**
+
+```js
+"use client";
+
+import { createContext, useReducer } from "react";
+
+const initialBasket = {
+  articles: [],
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "ADD":
+      return { ...state, articles: [...state.articles, action.article] };
+    case "REMOVE":
+      return { ...state, articles: state.articles.filter(article => article["name"] != action.articleName) };
+    case "RESET":
+      return {articles: [] };
+    default:
+      return state;
+  }
+};
+
+export const BasketContext = createContext({ state: initialBasket, dispatch: () => null });
+
+export const BasketContextProvider = ({
+  children,
+}) => {
+  const [state, dispatch] = useReducer(reducer, initialBasket);
+
+  return (
+    <BasketContext.Provider value={{ state, dispatch }}>
+      {children}
+    </BasketContext.Provider>
+  );
+};
+```
 
  ### 2. Show an example of a learning outcome you have struggled with and/or would like to re-visit.
 > [**Learning outcome...**]  
-> [your evidence here]
+After we maganed to make the shopping cart working we realized that we don't want to have our button on the home page but instead we wanted to move it to the item route where we could see all the other details such a color, size,description.
+> Trying to make this work was a bit more complicated because of the way we written our code. We decided instead of manageing the state in a function that dispaly the items we will move it only to the button. So we made a btn component and pass in the item as a prop.
+> We ended up having a few bugs and struggling to debug it. The item we were passing through as a prop it was undefined.
+Here is the btn to add item to the basket. Prop is 'product'.
+```js
+
+export const Add_item_basket = ({product}) => {
+    const { dispatch } = useContext(BasketContext);
+
+
+    const addToBasket = (product) => {
+        dispatch({ type: 'ADD', article: product });
+      };
+
+    return (
+        <>
+        <button key={uuidv4()} onClick={() => addToBasket(product)}>Add to basket</button>
+        </>
+    )
+}
+```
+Here we pass it through each product route:
+
+```js
+<ul className="variants">
+            {allVariants.map((variant) => (
+              <li key={variant.colour}>
+                <Link href={`/products/${params.id}/${variant.id}`}>
+                  {variant.colour}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Add_item_basket selectedProduct={selectedProduct} />
+        </>
+      ) : (
+        <div>
+          <Image
+            src={selectedProduct.image}
+            alt={selectedProduct.name}
+            width={200}
+            height={100}
+          />
+          <p>Colour: {selectedProduct.colour}</p>
+          <Add_item_basket selectedProduct={selectedProduct} />
+          <Link href={'/basket'}>Basket</Link>
+        </div>
+```
+Instead of ``` <Add_item_basket selectedProduct={selectedProduct} />``` we should have be consistent with our props naming and keep it ``` <Add_item_basket product={selectedProduct} />```
+Lesson learned. Can't wait to start using TypeScript!!!
 
 ## Feedback
 > [**Course Facilitator name**]  
