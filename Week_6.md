@@ -103,6 +103,37 @@ Instead of ``` <Add_item_basket selectedProduct={selectedProduct} />``` we shoul
 Lesson learned. Can't wait to start using TypeScript!!!
 
 ## Feedback
-> [**Course Facilitator name**]  
-> [*What went well*]  
-> [*Even better if*]
+### Alphonso's feedback
+#### What Went Well
+More than anything else, I like your enthusiasm for TypeScript! I'm a fan of it 👌
+This is a pretty comprehensive delve into your use of a Reducer, it's clearly been a really useful learning experiment :) 
+
+#### Even Better If
+These are small things, but I think it's worth keeping these habits in mind, specially this early on in your journey:
+
+Be mindful of readability. As a codebase grows (imagining this project were picked up later on and more features were added) it gets exponentially harder to read.
+Think of how your code reads to human eyes as it grows.
+Here I'm making the assumption that these actions refer to Articles in your basket. But you could well add functionality to your page to allow users to list new Artciles for sale. The handle 'ADD' would then need to be replaced everywhere on the code.
+```javascript
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "ADD":
+      return { ...state, articles: [...state.articles, action.article] };
+    case "REMOVE":
+      return { ...state, articles: state.articles.filter(article => article["name"] != action.articleName) };
+    case "RESET":
+      return {articles: [] };
+    default:
+      return state;
+  }
+};
+```
+
+This is pretty much nitpicking, but you're rendering just a button in the snippet below. You don't need to wrap it in anything.
+```javascript
+    return (
+        <>
+        <button key={uuidv4()} onClick={() => addToBasket(product)}>Add to basket</button>
+        </>
+    )
+```
